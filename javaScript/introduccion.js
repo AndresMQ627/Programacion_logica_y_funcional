@@ -42,3 +42,25 @@ var copia = arreglo.map((item, index)=>{
 console.log("arreglo modificado", arreglo);
 console.log("arreglo modificado", copia);
 
+let url = "https://thesimpsonsapi.com/api/"
+fetch(url+"characters").then((response)=>{
+
+    if(!response.ok){
+        throw "Error en la llamada"
+    }
+    return response.json()
+}).then((data)=>{
+    console.log("Datos del personaje: ",data)
+    var lis=""
+    data.results.forEach(personaje =>{
+        lis += `
+           
+        <li>
+            <h2>${personaje.name}</h2>
+            <img width="200px" src="https://cdn.thesimpsonsapi.com/500${personaje.portrait_path}"">
+        </li>
+        `
+    })
+
+    ul.innerHTML = lis
+})
