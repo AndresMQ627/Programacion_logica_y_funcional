@@ -88,3 +88,35 @@ header > nav > a{
     left: 0;
 }
 
+#opciones {
+    width: 250px;
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 2px solid #007BFF; /* borde azul */
+    border-radius: 6px;
+    background-color: #f0f8ff; /* azul muy claro */
+    color: #333;
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+  }
+  
+  #opciones:hover {
+    border-color: #0056b3;
+    box-shadow: 0 0 5px #0056b3;
+  }
+  
+  #opciones:focus {
+    outline: none;
+    border-color: #003d80;
+    box-shadow: 0 0 8px #003d80;
+  }
+  
+  /* Opciones (el styling de <option> es limitado y depende del navegador) */
+  #opciones option {
+    padding: 10px;
+    font-size: 14px;
+    color: #000;
+  }
+  
+
