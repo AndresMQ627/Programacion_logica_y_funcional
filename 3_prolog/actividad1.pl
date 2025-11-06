@@ -40,6 +40,23 @@ jefe(elliot, heather).
 
 %Mostrar compañeros de nivel de mike
 /*
-  ?- jefe(timothy, rebecca).
-  false.
+  ?- jefe(sheryl, X).
+  X = david ;
+  X = timothy ;
+  X = mike ;
+  X = elliot ;
+  X = lori.
+*/
+
+%Es el jefe de Rebecca compañero de nivel de David?
+/*
+  ?- jefe(X, rebecca), jefe(Y, X), jefe(Y, david).
+  X = elliot,
+  Y = sheryl
+*/
+
+%Es compañero de nivel mike de lori?
+/*
+  ?- jefe(X, mike), jefe(X, lori).
+  X = sheryl.
 */
