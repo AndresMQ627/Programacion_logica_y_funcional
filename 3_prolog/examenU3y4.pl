@@ -93,7 +93,7 @@ compara(L1, L2, Mayor) :-
     ; Mayor = iguales ).
 
 /*
-Invente una regla que utilice un comparador (compara entredos dos cual tiene mas lenguajes descendientes).
+Invente una regla que utilice un comparador (compara entre dos cual tiene mas lenguajes descendientes).
 
 ?- compara(haskell, ml, X).
 X = haskell.
